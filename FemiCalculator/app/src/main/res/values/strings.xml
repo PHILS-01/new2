@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">All in One Calculator</string>
+    <string name="title_graph">Graph</string>
+    <string name="title_matrix">Matrices</string>
+    <string name="title_finance">Finance</string>
+    <string name="title_more">More</string>
+    <string name="title_history">History</string>
+    <string name="title_science">Science</string>
+    <string name="title_statistics">Statistics</string>
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/surface_dark"
+        android:title="@string/title_equations"
+        app:titleTextColor="@color/text_primary" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <Spinner
+            android:id="@+id/spinnerTool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtFormula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:text="" />
+
+        <EditText android:id="@+id/inputExpr" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/text_primary" android:textColorHint="@color/text_secondary"
+            android:hint="e.g. x^2 + 3*x - 2" android:inputType="text" android:layout_marginTop="10dp"
+            android:visibility="gone"/>
+
+        <EditText android:id="@+id/inputA" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/text_primary" android:textColorHint="@color/text_secondary"
+            android:inputType="numberDecimal|numberSigned" android:layout_marginTop="10dp"/>
+        <EditText android:id="@+id/inputB" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/text_primary" android:textColorHint="@color/text_secondary"
+            android:inputType="numberDecimal|numberSigned" android:layout_marginTop="10dp"/>
+        <EditText android:id="@+id/inputC" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/text_primary" android:textColorHint="@color/text_secondary"
+            android:inputType="numberDecimal|numberSigned" android:layout_marginTop="10dp"/>
+        <EditText android:id="@+id/inputD" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/text_primary" android:textColorHint="@color/text_secondary"
+            android:inputType="numberDecimal|numberSigned" android:layout_marginTop="10dp"/>
+        <EditText android:id="@+id/inputE" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/text_primary" android:textColorHint="@color/text_secondary"
+            android:inputType="numberDecimal|numberSigned" android:layout_marginTop="10dp"/>
+        <EditText android:id="@+id/inputF" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/text_primary" android:textColorHint="@color/text_secondary"
+            android:inputType="numberDecimal|numberSigned" android:layout_marginTop="10dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerIneqOp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnSolve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Solve" />
+    </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/txtEquationResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:fontFamily="monospace"
+        android:textColor="@color/text_primary"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:text="" />
+
+    <FrameLayout
+        android:id="@+id/chartContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+</LinearLayout>

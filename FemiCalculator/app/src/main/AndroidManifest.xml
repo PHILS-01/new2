@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.FemiCalculator"
+        android:supportsRtl="true">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.GraphActivity" android:exported="false" />
+        <activity android:name=".ui.MatrixActivity" android:exported="false" />
+        <activity android:name=".ui.FinanceActivity" android:exported="false" />
+        <activity android:name=".ui.MoreActivity" android:exported="false" />
+        <activity android:name=".ui.HistoryActivity" android:exported="false" />
+        <activity android:name=".ui.ScienceActivity" android:exported="false" />
+        <activity android:name=".ui.StatisticsActivity" android:exported="false" />
+        <activity android:name=".ui.DetailResultActivity" android:exported="false" />
+
+    </application>
+
+</manifest>

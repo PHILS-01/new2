@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/surface_dark"
+        android:title="@string/title_more"
+        app:titleTextColor="@color/text_primary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <Spinner
+            android:id="@+id/spinnerTool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Statistics: comma separated list -->
+        <EditText
+            android:id="@+id/inputList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/text_primary"
+            android:hint="Comma separated numbers, e.g. 4,8,15,16,23,42"
+            android:visibility="gone" />
+
+        <!-- Derivative/Integral: expression in x -->
+        <EditText
+            android:id="@+id/inputExpr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:hint="e.g. x^2 + 3*x - 2"
+            android:inputType="text"
+            android:visibility="gone" />
+
+        <EditText android:id="@+id/inputA" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/text_primary" android:inputType="numberDecimal|numberSigned" android:layout_marginTop="10dp"/>
+        <EditText android:id="@+id/inputB" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/text_primary" android:inputType="numberDecimal|numberSigned" android:layout_marginTop="10dp"/>
+        <EditText android:id="@+id/inputC" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/text_primary" android:inputType="numberDecimal|numberSigned" android:layout_marginTop="10dp"/>
+        <EditText android:id="@+id/inputD" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/text_primary" android:inputType="numberDecimal|numberSigned" android:layout_marginTop="10dp"/>
+        <EditText android:id="@+id/inputE" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/text_primary" android:inputType="numberDecimal|numberSigned" android:layout_marginTop="10dp"/>
+        <EditText android:id="@+id/inputF" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/text_primary" android:inputType="numberDecimal|numberSigned" android:layout_marginTop="10dp"
+            android:visibility="gone"/>
+
+        <Spinner
+            android:id="@+id/spinnerIneqOp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/rowUnits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+            <Spinner android:id="@+id/spinnerFromUnit" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+            <Spinner android:id="@+id/spinnerToUnit" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Calculate" />
+
+        <TextView
+            android:id="@+id/txtMoreResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:text="" />
+
+        <FrameLayout
+            android:id="@+id/chartContainer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
