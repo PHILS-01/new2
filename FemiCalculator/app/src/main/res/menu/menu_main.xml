@@ -1,9 +1,0 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/menu_graph" android:title="Graph" android:showAsAction="never" />
-    <item android:id="@+id/menu_matrix" android:title="Matrices" android:showAsAction="never" />
-    <item android:id="@+id/menu_finance" android:title="Finance" android:showAsAction="never" />
-    <item android:id="@+id/menu_more" android:title="More" android:showAsAction="never" />
-    <item android:id="@+id/menu_science" android:title="Science" android:showAsAction="never" />
-    <item android:id="@+id/menu_statistics" android:title="Statistics" android:showAsAction="never" />
-    <item android:id="@+id/menu_history" android:title="History" android:showAsAction="never" />
-</menu>
