@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/surface_dark"
+        android:title="@string/title_graph"
+        app:titleTextColor="@color/text_primary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/editFunction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="e.g. sin(x), x^2, 2*x+3"
+            android:textColorHint="@color/text_secondary"
+            android:textColor="@color/text_primary"
+            android:inputType="text"
+            android:text="x^2" />
+
+        <Button
+            android:id="@+id/btnAddFunction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plot" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtFunctionList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
+        android:textColor="@color/text_secondary"
+        android:text="" />
+
+    <com.femi.calculator.ui.GraphView
+        android:id="@+id/graphView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnResetView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Reset View" />
+
+        <Button
+            android:id="@+id/btnClearFunctions"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Clear All" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#101010">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:background="#1E1E1E" android:title="MATRICES" android:titleTextColor="#F5F5F5"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="10dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Matrix count" android:textColor="#AAAAAA"/>
+                <Button android:id="@+id/btnMatrixRemove" android:layout_width="48dp" android:layout_height="44dp" android:text="−"/>
+                <TextView android:id="@+id/txtMatrixCount" android:layout_width="48dp" android:layout_height="44dp" android:gravity="center" android:text="2" android:textColor="#F5F5F5" android:textSize="18sp"/>
+                <Button android:id="@+id/btnMatrixAdd" android:layout_width="48dp" android:layout_height="44dp" android:text="+"/>
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Matrices can be added side by side. Use A, B, C … in the expression." android:textColor="#888888" android:textSize="12sp" android:padding="4dp"/>
+            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="horizontal">
+                <LinearLayout android:id="@+id/matricesContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal"/>
+            </HorizontalScrollView>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Matrix expression" android:textColor="#AAAAAA" android:layout_marginTop="12dp"/>
+            <EditText android:id="@+id/editMatrixExpression" android:layout_width="match_parent" android:layout_height="54dp" android:background="@drawable/calc_edit" android:hint="e.g. 0.2A^2 - 3B + 4AB" android:textColor="#F5F5F5" android:textColorHint="#777777" android:inputType="text"/>
+            <Button android:id="@+id/btnCompute" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="8dp" android:text="COMPUTE"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Result" android:textColor="#AAAAAA" android:layout_marginTop="14dp"/>
+            <TextView android:id="@+id/txtScalarResult" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#F5F5F5" android:textSize="18sp" android:padding="6dp"/>
+            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"><com.femi.calculator.ui.BracketedMatrixView android:id="@+id/matrixResult" android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="gone"/></HorizontalScrollView>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#303030" android:layout_marginTop="18dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Solve Ax = b using Matrix A" android:textColor="#AAAAAA" android:layout_marginTop="14dp"/>
+            <EditText android:id="@+id/editVectorB" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/calc_edit" android:hint="b: 5,6" android:textColor="#F5F5F5" android:textColorHint="#777777"/>
+            <Button android:id="@+id/btnSolve" android:layout_width="match_parent" android:layout_height="50dp" android:text="SOLVE FOR X" android:layout_marginTop="8dp"/>
+            <TextView android:id="@+id/txtVectorResult" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#F5F5F5" android:fontFamily="monospace" android:padding="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

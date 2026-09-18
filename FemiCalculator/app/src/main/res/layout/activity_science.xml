@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#101010">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:background="#1E1E1E" android:title="SCIENCE" android:titleTextColor="#F5F5F5"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="10dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="STRUCTURE ENGINE" android:textColor="#AAAAAA" android:textStyle="bold"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <EditText android:id="@+id/editStructureName" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:background="@drawable/calc_edit" android:hint="e.g. sulphur(IV)oxide or SO₂" android:textColor="#F5F5F5" android:textColorHint="#777777"/>
+                <Button android:id="@+id/btnDrawStructure" android:layout_width="120dp" android:layout_height="52dp" android:text="DRAW"/>
+            </LinearLayout>
+            <FrameLayout android:id="@+id/structureContainer" android:layout_width="match_parent" android:layout_height="250dp" android:layout_marginTop="6dp"/>
+            <Spinner android:id="@+id/spinnerTopic" android:layout_width="match_parent" android:layout_height="48dp"/>
+            <Spinner android:id="@+id/spinnerTool" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="8dp"/>
+            <TextView android:id="@+id/txtFormula" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:fontFamily="monospace" android:textColor="#AAAAAA" android:textSize="14sp"/>
+            <EditText android:id="@+id/inputA" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/calc_edit" android:textColor="#F5F5F5" android:textColorHint="#777777" android:inputType="numberDecimal|numberSigned" android:layout_marginTop="8dp"/>
+            <EditText android:id="@+id/inputB" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/calc_edit" android:textColor="#F5F5F5" android:textColorHint="#777777" android:inputType="numberDecimal|numberSigned" android:layout_marginTop="8dp"/>
+            <EditText android:id="@+id/inputC" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/calc_edit" android:textColor="#F5F5F5" android:textColorHint="#777777" android:inputType="numberDecimal|numberSigned" android:layout_marginTop="8dp"/>
+            <EditText android:id="@+id/inputD" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/calc_edit" android:textColor="#F5F5F5" android:textColorHint="#777777" android:inputType="numberDecimal|numberSigned" android:layout_marginTop="8dp"/>
+            <EditText android:id="@+id/inputE" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/calc_edit" android:textColor="#F5F5F5" android:textColorHint="#777777" android:inputType="numberDecimal|numberSigned" android:layout_marginTop="8dp"/>
+            <Button android:id="@+id/btnCalculate" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="10dp" android:text="CALCULATE"/>
+            <TextView android:id="@+id/txtScienceResult" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="10dp" android:fontFamily="monospace" android:textColor="#F5F5F5" android:textSize="16sp" android:textStyle="bold"/>
+            <FrameLayout android:id="@+id/chartContainer" android:layout_width="match_parent" android:layout_height="420dp" android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
